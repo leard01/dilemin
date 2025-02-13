@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Main Page</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            if (loggedInUser && loggedInUser !== 'null') {
+                document.getElementById('page-title').textContent = `Guten Tag, ${loggedInUser}.`;
+            }
+        });
+    </script>
+</head>
+<body class="main-body">
+    <header style="display: flex; align-items: center;">
+        <div class="logo" id="page-title" style="margin-left: 20px;">Guten Tag, Benutzer</div>
+        <img id="profile-picture" class="profile-picture" src="" alt="Profile Picture" style="display: none; object-fit: cover; width: 50px; height: 50px; border-radius: 50%;">
+    </header>
+    <main class="content">
+        <div class="card">
+            <img src="../images/bild1.jpeg" alt="Image 1">
+            <p>Caption for Image 1</p>
+        </div>
+        <div class="card">
+            <img src="../images/London1.jpeg" alt="Image 2">
+            <p>Caption for Image 2</p>
+        </div>
+        <div class="card">
+            <img src="../images/London1.jpeg" alt="Image 2">
+            <p>Caption for Image 2</p>
+        </div>
+        <div class="card">
+            <img src="../images/London1.jpeg" alt="Image 2">
+            <p>Caption for Image 2</p>
+        </div>
+        <div class="card">
+            <img src="../images/London1.jpeg" alt="Image 2">
+            <p>Caption for Image 2</p>
+        </div>
+        <div class="card">
+            <div class="carousel">
+                <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+                <div class="carousel-images">
+                    <img src="../images/container1.1.jpeg" alt="Image 1">
+                    <img src="../images/container1.2.jpeg" alt="Image 2">
+                    <img src="../images/container1.3.jpeg" alt="Image 3">
+                    <img src="../images/container1.4.jpeg" alt="Image 4">
+                    <img src="../images/container1.5.jpeg" alt="Image 5">
+                    <img src="../images/container1.6.jpeg" alt="Image 6">
+                    <!-- Weitere Bilder hinzufügen -->
+                </div>
+                <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+            </div>
+            <p>Carousel Caption</p>
+        </div>
+        <!-- Weitere Karten hinzufügen -->
+    </main>
+    <div class="navbar">
+        <a href="main.html" class="active"><i class="fas fa-home"></i></a> <!-- Change to simpler home icon -->
+        <a href="page1.html"><i class="fas fa-heart"></i></a>
+        <a href="page2.html"><i class="fas fa-file-alt"></i></a>
+        <a href="login.html"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

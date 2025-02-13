@@ -1,0 +1,484 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #141414;
+    color: #fff;
+    max-width: 100vw; /* Maximale Breite für alle Geräte */
+    margin: auto; /* Zentriere den Inhalt */
+}
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.2); /* Dunklerer Hintergrund */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.5); /* Leuchtendes rotes Glühen */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 10px; /* Padding anpassen */
+    position: fixed;
+    bottom: 0; /* Unten andocken */
+    width: 100%; /* Volle Breite */
+    display: flex;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px; /* Kleinere Padding für kleinere Buttons */
+    border-radius: 10px; /* Weniger runde Ecken */
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Zentriere die Icons */
+    font-size: 1em; /* Kleinere Schriftgröße */
+    width: 40px; /* Kleinere Breite */
+    height: 40px; /* Kleinere Höhe */
+}
+
+.navbar a i {
+    margin-right: 0; /* Abstand zwischen Icon und Text entfernen */
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar a.active {
+    background-color: #e50914;
+}
+
+header {
+    background-color: #141414; /* Gleiche Farbe wie der Hintergrund */
+    color: #fff;
+    text-align: left; /* Links ausrichten */
+    padding: 10px 20px; /* Weniger Padding */
+    position: fixed; /* Fix the header at the top */
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Schatten hinzufügen */
+    border: none; /* Rand entfernen */
+    display: flex;
+    justify-content: space-between; /* Platz zwischen den Elementen */
+    align-items: center; /* Vertikale Ausrichtung */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 500; /* Dünnere Schrift */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Apple-Schriftart */
+    margin-left: 10px; /* Weniger Abstand zum linken Rand */
+}
+
+.content {
+    padding: 80px 20px 20px;
+    overflow-y: auto;
+    height: calc(100vh - 160px); /* Höhe anpassen, um Platz für Header und Navbar zu lassen */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.content::-webkit-scrollbar {
+    display: none; /* WebKit-Browser (Chrome, Safari) */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.cursive-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
+}
+
+.letter-container {
+    background: #fdf5e6; /* Parchment-style background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive; /* Handwriting style */
+    color: #4a4a4a; /* Dark grey color */
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .navbar {
+        bottom: 0; /* Unten andocken für mobile Geräte */
+        width: 100%; /* Volle Breite für mobile Geräte */
+    }
+
+    .content {
+        padding: 60px 10px 10px; /* Padding für mobile Geräte anpassen */
+        height: calc(100vh - 120px); /* Höhe für mobile Geräte anpassen */
+    }
+
+    .cursive-title {
+        font-size: 2em;
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .letter-container {
+        margin: 10px;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 601px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .navbar {
+        bottom: 0; /* Unten andocken für Desktop-Geräte */
+        width: 100%; /* Volle Breite für Desktop-Geräte */
+    }
+
+    .content {
+        padding: 80px 20px 20px; /* Padding für Desktop-Geräte anpassen */
+        height: calc(100vh - 160px); /* Höhe für Desktop-Geräte anpassen */
+    }
+}
+
+.login-body {
+    background-color: #141414;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-body .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.5;
+    pointer-events: none; /* Verhindere Interaktion mit dem Video */
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px; /* Breite anpassen */
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+}
+
+.login-container h1 {
+    color: #e50914;
+}
+
+.login-container .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #b3b3b3;
+}
+
+.login-container select{
+    width: 250px; /* Feste numerische Breite */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+.login-container input[type="password"] {
+    width: 230px; /* Feste numerische Breite */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.login-container button {
+    width: 250px; /* Feste numerische Breite */
+    padding: 10px;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #f40612;
+    box-shadow: 0 0 10px #f40612, 0 0 20px #f40612, 0 0 30px #f40612;
+}
+
+#message-container {
+    margin-top: 10px;
+    color: #e50914;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Schönere Schriftart */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#password-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.main-body {
+    background-color: #141414;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-body .background-video {
+    display: none; /* Hintergrundvideo ausblenden */
+}
+
+.glass-navbar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.5); /* Leuchtendes rotes Glühen */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 10px; /* Padding anpassen */
+    position: fixed;
+    bottom: 10px; /* Abstand vom unteren Rand anpassen */
+    width: calc(100% - 20px); /* Breite anpassen */
+    margin: 0 10px; /* Abstand von den Seiten anpassen */
+    display: flex;
+    justify-content: space-around;
+}
+
+.glass-navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px; /* Größere Padding für größere Buttons */
+    border-radius: 20px; /* Größere Border-Radius */
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Zentriere die Icons */
+    font-size: 1.2em; /* Größere Schriftgröße */
+}
+
+.glass-navbar a i {
+    margin-right: 0; /* Abstand zwischen Icon und Text entfernen */
+}
+
+.glass-navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.glass-navbar a.active {
+    background-color: #e50914;
+}
+
+.content {
+    padding: 80px 20px 20px;
+    overflow-y: auto;
+    height: calc(100vh - 160px); /* Höhe anpassen, um Platz für Header und Navbar zu lassen */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.content::-webkit-scrollbar {
+    display: none; /* WebKit-Browser (Chrome, Safari) */
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.profile-picture {
+    width: 50px; /* Größere Breite */
+    height: 50px; /* Größere Höhe */
+    border-radius: 50%;
+    margin-right: 15px; /* Weniger Abstand zum rechten Rand */
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Ensure equal spacing between buttons */
+    justify-items: center;
+    margin-top: 20px;
+}
+.glass-button, .text-button {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px; /* Less round */
+    background: rgba(229, 9, 20, 0.8); /* Red color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(229, 9, 20, 0.5); /* Add small glow */
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.glass-button:hover, .text-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(229, 9, 20, 0.7); /* Enhance glow on hover */
+}
+.glass-button i, .text-button {
+    font-size: 2em;
+    color: #fff;
+}
+.text-button {
+    font-weight: bold;
+}

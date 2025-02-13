@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/scripts.js"></script>
+</head>
+<body class="login-body">
+    <video autoplay muted loop playsinline class="background-video" id="background-video">
+        <source src="../images/dilemini1.mp4" type="video/mp4"> 
+        Dein Browser unterstützt die Video Hintergründe nicht, du Opfer.
+    </video>
+    <div class="login-container">
+        <h1>Gesperrt</h1>
+        <div class="form-group">
+            <label for="user-select">Benutzer auswählen:</label>
+            <select id="user-select" onchange="showPasswordField()"> 
+                <option value="Zemerini" selected>Zemerini</option>
+                <option value="Dilemini">Dilemini</option>
+            </select>
+        </div>
+        <div id="password-container" class="form-group" style="display: none;">
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="validateLogin()">Anmelden</button>
+        </div>
+        <div id="message-container" class="form-group"></div>
+    </div>
+    <script>
+        document.getElementById('background-video').playbackRate = 0.75;
+    </script>
+</body>
+</html>
