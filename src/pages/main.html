@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Main Page</title>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const loggedInUser = localStorage.getItem('loggedInUser');
             if (loggedInUser && loggedInUser !== 'null') {
-                document.getElementById('page-title').textContent = `Guten Tag, ${loggedInUser}.`;
+                const titleElement = document.getElementById('page-title');
+                if (titleElement) {
+                    titleElement.textContent = `Hey, ${loggedInUser}.`;
+                    titleElement.style.fontFamily = "'Roboto', sans-serif";
+                }
             }
         });
     </script>
@@ -23,40 +29,105 @@
     <main class="content">
         <div class="card">
             <img src="../images/bild1.jpeg" alt="Image 1">
-            <p>Caption for Image 1</p>
+            <p>Ich liebe das Bild einfach.</p>
         </div>
         <div class="card">
-            <img src="../images/London1.jpeg" alt="Image 2">
-            <p>Caption for Image 2</p>
+            <img src="../images/con1.1.jpeg" alt="Image 1">
+            <p>Warum mache ich meine Lippen so???</p>
         </div>
         <div class="card">
-            <img src="../images/London1.jpeg" alt="Image 2">
-            <p>Caption for Image 2</p>
+            <img src="../images/con1.2.jpeg" alt="Image 2">
+            <p>UNS GEHT ES GUT.</p>
         </div>
         <div class="card">
-            <img src="../images/London1.jpeg" alt="Image 2">
-            <p>Caption for Image 2</p>
+            <img src="../images/con1.3.jpeg" alt="Image 3">
+            <p>Beim Küssen immer Augen zu man...</p>
         </div>
         <div class="card">
-            <img src="../images/London1.jpeg" alt="Image 2">
-            <p>Caption for Image 2</p>
+            <img src="../images/con1.4.jpeg" alt="Image 4">
+            <p>Süß</p>
         </div>
         <div class="card">
-            <div class="carousel">
-                <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
-                <div class="carousel-images">
-                    <img src="../images/container1.1.jpeg" alt="Image 1">
-                    <img src="../images/container1.2.jpeg" alt="Image 2">
-                    <img src="../images/container1.3.jpeg" alt="Image 3">
-                    <img src="../images/container1.4.jpeg" alt="Image 4">
-                    <img src="../images/container1.5.jpeg" alt="Image 5">
-                    <img src="../images/container1.6.jpeg" alt="Image 6">
-                    <!-- Weitere Bilder hinzufügen -->
-                </div>
-                <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
-            </div>
-            <p>Carousel Caption</p>
+            <img src="../images/bild2.jpeg" alt="Image 5">
+            <p>Outfit einfach perfekt.</p>
         </div>
+        <div class="card">
+            <img src="../images/bild3.jpeg" alt="Image 6">
+            <p>Du weißt nicht, wie weh das Bild eigentlich tut. Dilemin, du bist eine crazy Kämpferin.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild4.jpeg" alt="Image 7">
+            <p>Augen wie ein Bogen.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild5.jpeg" alt="Image 8">
+            <p>Was ein Grinsen.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild6.jpeg" alt="Image 9">
+            <p>Das letzte was du siehst, bevor Dilemini dich umbringt.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild7.jpeg" alt="Image 10">
+            <p>Ich liebe das Bild einfach HAHAHAHAH</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild8.jpeg" alt="Image 11">
+            <p>Gezeigefingert. So siehts aus.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild9.jpeg" alt="Image 12">
+            <p>Raum für Interpretation...</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild10.jpeg" alt="Image 13">
+            <p>Die Soße an dein Mund. Auch Lachkick einfach.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild11.jpeg" alt="Image 14">
+            <p>Süß und hübsch.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild12.jpeg" alt="Image 15">
+            <p>Unser neues Leben als Studenten. Auch, wenn man immer mehr lernen könnte. In sha Allah benehmen wir uns und bewältigen das Studium gemeinsam Dilemin.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild13.jpeg" alt="Image 16">
+            <p>Mein Hamster lan</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild14.jpeg" alt="Image 17">
+            <p>Die ÖPNV Tante mit verzogener Mimik.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild15.jpeg" alt="Image 18">
+            <p>Todesblick</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild16.jpeg" alt="Image 19">
+            <p>Last Day as Malteser for Dilemini</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild17.jpeg" alt="Image 20">
+            <p>Napoli</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild18.jpeg" alt="Image 21">
+            <p>ICH BRING DICH UM. Find das irgendwo witzig, dass der Pic das eventuell auch gesehen hat.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild19.jpeg" alt="Image 22">
+            <p>Einfach süß. Obwohl das Bild so spontan entstanden ist. Ich liebe es einfach, dass ich das sogar drucken würde.</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild20.jpeg" alt="Image 23">
+            <p>Das ist genau sooooo süß man</p>
+        </div>
+        <div class="card">
+            <img src="../images/bild21.jpeg" alt="Image 24">
+            <p>Keine Ahnung wer der Idiot ist.</p>
+        </div>
+    
         <!-- Weitere Karten hinzufügen -->
     </main>
     <div class="navbar">

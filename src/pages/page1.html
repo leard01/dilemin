@@ -6,29 +6,22 @@
     <title>Sexy Seite</title>
     <link rel="stylesheet" href="../css/styles.css"> <!-- Ensure this path is correct -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const loggedInUser = localStorage.getItem('loggedInUser');
-            if (loggedInUser && loggedInUser !== 'null') {
-                document.getElementById('page-title').textContent = `Guten Tag, ${loggedInUser}.`;
-            }
-        });
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="main-body">
     <header style="display: flex; align-items: center;">
-        <div class="logo" id="page-title" style="margin-left: 20px;">Penne</div>
+        <h1 style="margin: 0 0 0 20px; color: white;">Penne</h1>
         <img id="profile-picture" class="profile-picture" src="" alt="Profile Picture" style="display: none; object-fit: cover; width: 50px; height: 50px; border-radius: 50%;">
     </header>
     <main class="content">
-        <section class="card">
-            <p>Hier kannst du einige geile Funktionen entdecken. Was das genau ist musst du Opfer schon selber herausfinden. - Dein Zemerini</p>
+        <section class="card" style="text-align: left; padding: 20px; font-family: 'Roboto', sans-serif;">
+            <p>Hier kannst du einige geile Funktionen entdecken. Was das genau ist, musst du Opfer schon selber herausfinden. <br><br>Dein Zemerini</p>
         </section>
         <div class="button-grid">
-            <div class="glass-button"><i class="fas fa-spinner fa-spin"></i></div>
-            <div class="glass-button"><i class="fas fa-heart"></i></div>
-            <div class="text-button">100</div>
-            <div class="text-button">SOS</div>
+            <a href="spin.html" class="glass-button"><i class="fas fa-spinner fa-spin"></i></a>
+            <a href="hot.html" class="glass-button"><i class="fas fa-heart"></i></a>
+            <a href="100.html" class="text-button">100</a>
+            <a href="sos.html" class="text-button">SOS</a>
         </div>
     </main>
     <div class="navbar">

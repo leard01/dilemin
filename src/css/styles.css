@@ -48,15 +48,15 @@ input[type="submit"]:hover {
 }
 
 .navbar {
-    background: rgba(255, 255, 255, 0.2); /* Dunklerer Hintergrund */
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.5); /* Leuchtendes rotes Glühen */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-    padding: 10px; /* Padding anpassen */
+    background: #333; /* Dunkles Grau */
+    box-shadow: 0 4px 6px rgba(229, 9, 20, 0.3), 0 -4px 6px rgba(229, 9, 20, 0.3); /* Subtle red box shadow above and below */
+    backdrop-filter: none; /* Entferne den Glaseffekt */
+    -webkit-backdrop-filter: none; /* Entferne den Glaseffekt */
+    border-top: none; /* Entferne den Rand */
+    padding: 10px;
     position: fixed;
-    bottom: 0; /* Unten andocken */
-    width: 100%; /* Volle Breite */
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     z-index: 2;
@@ -88,8 +88,34 @@ input[type="submit"]:hover {
     background-color: #e50914;
 }
 
+.navbar-button {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-button i {
+    margin-right: 0;
+}
+
+.navbar-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-button.active {
+    background-color: #e50914;
+}
+
 header {
-    background-color: #141414; /* Gleiche Farbe wie der Hintergrund */
+    background-color: rgb(20, 20, 20); /* Gleiche Farbe wie der Hintergrund */
     color: #fff;
     text-align: left; /* Links ausrichten */
     padding: 10px 20px; /* Weniger Padding */
@@ -97,7 +123,6 @@ header {
     width: 100%;
     top: 0;
     z-index: 2;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Schatten hinzufügen */
     border: none; /* Rand entfernen */
     display: flex;
     justify-content: space-between; /* Platz zwischen den Elementen */
@@ -107,7 +132,7 @@ header {
 .logo {
     font-size: 24px;
     font-weight: 500; /* Dünnere Schrift */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Apple-Schriftart */
+    font-family: 'Roboto', sans-serif; /* Neue Schriftart */
     margin-left: 10px; /* Weniger Abstand zum linken Rand */
 }
 
@@ -378,6 +403,11 @@ header {
     background-color: #e50914;
 }
 
+a {
+    text-decoration: none; /* Entferne die Unterstreichung */
+    color: inherit; /* Übernehme die Textfarbe des Eltern-Elements */
+}
+
 .content {
     padding: 80px 20px 20px;
     overflow-y: auto;
@@ -449,16 +479,22 @@ header {
     width: 50px; /* Größere Breite */
     height: 50px; /* Größere Höhe */
     border-radius: 50%;
-    margin-right: 15px; /* Weniger Abstand zum rechten Rand */
+    margin-right: 10px; /* Weniger Abstand zum rechten Rand */
 }
 
 .button-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px; /* Ensure equal spacing between buttons */
-    justify-items: center;
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px; /* Adjust the gap as needed */
 }
+
+.button-grid a {
+    flex: 1 1 calc(25% - 10px); /* Adjust the percentage and gap as needed */
+    text-align: center;
+    margin: 5px; /* Adjust the margin as needed */
+}
+
 .glass-button, .text-button {
     width: 100px;
     height: 100px;
@@ -481,4 +517,131 @@ header {
 }
 .text-button {
     font-weight: bold;
+}
+
+.back-button {
+    display: block;
+    width: calc(100% - 40px); /* Make the button wider with margin */
+    margin: 0 20px; /* Margin from the side edges */
+    text-align: center;
+    padding: 10px;
+    background-color: #e50914; /* Same red color as navbar buttons */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px; /* Less rounded */
+    margin-top: 10px;
+}
+.back-button i {
+    margin-right: 5px;
+}
+
+#spin_the_wheel {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+#wheel {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#spin {
+  font: 1.5em/0 "Lato", sans-serif;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  margin: -15%;
+  background: #fff;
+  color: #fff;
+  box-shadow: 0 0 0 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  transition: 0.8s;
+}
+
+#spin::after {
+  content: "";
+  position: absolute;
+  top: -17px;
+  border: 10px solid transparent;
+  border-bottom-color: currentColor;
+  border-top: none;
+}
+
+#final-selection {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold; /* Make the font thicker */
+  color: #fff;
+  background: rgba(255, 0, 0, 0.8);
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.5);
+}
+
+.yellow-card {
+    background-color: #ffffe0; /* Lighter yellow */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.yellow-card-img {
+    width: 100%;
+    height: auto;
+}
+
+.yellow-card-title {
+    margin-top: 10px;
+}
+
+.yellow-card-icon {
+    font-size: 24px;
+}
+
+.striped-card {
+    background: repeating-linear-gradient(
+        45deg,
+        #ffeb3b, /* Bright yellow */
+        #ffeb3b 10px,
+        #000 10px,
+        #000 20px
+    );
+    padding: 20px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.striped-card-img {
+    width: 100%;
+    height: auto;
+}
+
+.striped-card-title {
+    margin-top: 10px;
+    color: #fff; /* White text */
+    background-color: #000; /* Black background */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.striped-card-icon {
+    font-size: 24px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
