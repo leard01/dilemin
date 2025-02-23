@@ -1,14 +1,12 @@
 const sectors = [
-    { color: "#8B0000", text: "#FFFFFF", label: "Blasen" },
-    { color: "#FF0000", text: "#FFFFFF", label: "Küssen" },
-    { color: "#8B0000", text: "#FFFFFF", label: "Tot" },
-    { color: "#FF0000", text: "#FFFFFF", label: "Lecken" },
-    { color: "#8B0000", text: "#FFFFFF", label: "Boobies" },
-    { color: "#FF0000", text: "#FFFFFF", label: "Pussy" },
-    { color: "#8B0000", text: "#FFFFFF", label: "Reiten" },
-    { color: "#FF0000", text: "#FFFFFF", label: "Doggy" },
-    { color: "#8B0000", text: "#FFFFFF", label: "Anal" },
-    { color: "#FF0000", text: "#FFFFFF", label: "hehehe" },
+    { color: "#8B0000", text: "#FFFFFF", label: "Burger" },
+    { color: "#FF0000", text: "#FFFFFF", label: "Pizza" },
+    { color: "#8B0000", text: "#FFFFFF", label: "Pasta" },
+    { color: "#FF0000", text: "#FFFFFF", label: "Rewe" },
+    { color: "#8B0000", text: "#FFFFFF", label: "Zio" },
+    { color: "#FF0000", text: "#FFFFFF", label: "BurgerKing" },
+    { color: "#8B0000", text: "#FFFFFF", label: "Bäcker" },
+    { color: "#FF0000", text: "#FFFFFF", label: "Eismolin" },
 ];
 
 const events = {
